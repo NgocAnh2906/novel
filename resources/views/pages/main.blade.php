@@ -1,6 +1,6 @@
 @extends('../layout')
 @section ('sider')
-@include ('pages.sider')
+	@include ('pages.sider')
 @endsection
 @section('content')
 	
