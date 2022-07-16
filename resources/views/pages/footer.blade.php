@@ -1,3 +1,7 @@
+<!-- End Content -->
+		<div class="cl">&nbsp;</div>
+	</div>
+	<!-- End Main -->
 <!-- Footer -->
 	<div id="footer" class="shell">
 		<div class="top">

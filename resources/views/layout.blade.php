@@ -22,8 +22,8 @@
     </head>
     <body>
             @include('pages.header')
-          
             @yield('sider')
+            @yield('menu')
             @yield('content') 
             @include('pages.footer') 
 

@@ -2,6 +2,9 @@
 @section ('sider')
 	@include ('pages.sider')
 @endsection
+@section ('menu')
+	@include ('pages.menu')
+@endsection
 @section('content')
 	
 		<!-- Content -->
@@ -9,13 +12,11 @@
 			<!-- Products -->
 			<div class="products">
 				<h3>TRUYỆN MỚI CẬP NHẬT</h3>
-
 				<ul>
-				
 					 @foreach ($truyen as $key => $t)
 					<li>
 						<div class="product">
-							<a href="#" class="info">
+							<a href=" {{url('doc-truyen/'.$t->id_novel)}} " class="info">
 								<span class="holder">
 									<img src="{{asset('uploads/truyen/'.$t->image)}}" alt="" />
 									<span class="book-name">{{$t->name_novel}}</span>

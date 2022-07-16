@@ -70,7 +70,7 @@ textarea { overflow: auto; }
 
 #main { padding-top: 51px; padding-bottom: 41px; z-index: 1; }
 
-#sidebar { float: left; display: inline; width: 214px; padding: 6px 0; }
+#sidebar { float: right; display: inline; width: 214px; padding: 6px 0; }
 #sidebar h4 { border-bottom: solid 4px #eaeaea; padding: 0 0 8px 1px; }
 
 #sidebar .categories { list-style: none; }
@@ -80,9 +80,14 @@ textarea { overflow: auto; }
 #sidebar .categories ul li a { color: #929292; }
 
 #content { float: right; display: inline; width: 635px; }
+#content.novel { background-color: #eeeeee; display: block; float: none;
+    width: 884px;
+    margin: 0 auto;
+     padding: 0 46px;
+    position: relative;}
 #content h3 { padding: 0 0 7px 3px; border-bottom: solid 4px #eaeaea; margin-bottom: 12px; }
 
-.products ul { list-style: none; position: relative; width: 660px; margin-left: -7px; width: 660px; }
+.products ul { list-style: none; position: relative;  margin-left: -7px;padding-left: 0px; width: 660px; }
 .products ul li { float: left; display: inline; width: 150px; margin: 0 15px 14px 0; }
 .products ul li a.info { display: block; padding: 7px; width: 136px; text-decoration: unset;}
 .products ul li a.info:hover { background: url(images/product-hover.png) no-repeat 0 0; }
@@ -97,8 +102,22 @@ textarea { overflow: auto; }
 
 .product .book-name { font-size: 12px; line-height: 20px; color: #0182b5; font-family: "Nunito"; white-space: nowrap; text-overflow: ellipsis; display: inline-block; overflow: hidden; max-width: 100%;}
 .product .info:hover .book-name{ text-decoration: underline!important;}
-.product .author { font-size: 11px; line-height: 14px; color: #3d3d3d; font-family: "Nunito"; padding: 0 0 9px 1px; display: block; }
+.product .author { font-size: 11px; line-height: 16px; color: #3d3d3d; font-family: "Nunito"; padding: 0 0 9px 1px; display: block; }
+.product .theloai { font-size: 16px; line-height: 14px; color: #0e0c0c; font-family: "Nunito"; padding: 0 0 9px 1px; display: block; }
 .product .description { font-size: 11px; line-height: 16px; color: #878787; white-space: nowrap; text-overflow: ellipsis; display: inline-block; overflow: hidden; max-width: 100%;}
+.product.detail {width: 600px;}
+.product.detail .info{width: 250px;}
+.product.detail img{width: 200px;height:250px}
+.product.detail .product-info {margin-left: 40px;margin-top: 10px;}
+.products ul li .product.detail a.info:hover {background: none;}
+.product.detail .product-info .book-name {font-size: 18px;line-height: 1.5;font-weight: bold;}
+.product.detail .product-info .author {font-size: 16px;font-style: italic;}
+.product.detail .product-info .description {white-space: normal;font-size: 14px;line-height: 24px;}
+.product.detail p.description-info{padding: 7px;}
+
+ul.chapter-list{list-style: disc;width: unset;margin-left: unset;padding-left: 40px;}
+.chapter-list .chapter-item{width: unset;display: list-item;float: unset;}
+.chapter-list .chapter-item a{text-decoration: none;}
 
 #best-sellers { padding-top: 18px; width: 100%; position: relative; }
 #best-sellers h3 { color: #404040; margin-bottom: 0; }

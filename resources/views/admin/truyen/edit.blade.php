@@ -73,7 +73,7 @@
                                 <option value="0">Kích hoạt</option>
                                  <option value="1">Không kích hoạt</option>
                                  @else
-                                 <option value="1">Không ích hoạt</option>
+                                 <option value="1">Không kích hoạt</option>
                                  <option value="0">Kích hoạt</option>
                                  @endif
                              </select>

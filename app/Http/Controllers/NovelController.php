@@ -227,6 +227,7 @@ class NovelController extends Controller
         $truyen->save();
         
         return redirect()->back()->with('success','Cập nhật truyện thành công');
+      
     
     }
     

@@ -9,9 +9,9 @@ class Novel extends Model
 {
     use HasFactory;
     protected $fillable =[
-        
     'name_novel','slug_novel','image','author', 'id_cate_novel' ,'view', 'description' ,'status'
     ];
+
     protected $primaryKey='id_novel';
     protected $table= 'novels';
       public $incrementing = false;

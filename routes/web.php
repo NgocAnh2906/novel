@@ -19,8 +19,9 @@ use App\Http\Controllers\IndexController;
 */
 
 Route::get('/', [IndexController::class,'home']);
-Route::get('/danh-muc/{slug}', [IndexController::class,'doctruyen']);
-Route::get('/the-loai/{slug}', [IndexController::class,'doctruyentheloai']);
+Route::get('/doc-truyen/{slug}', [IndexController::class,'doctruyen']);
+Route::get('/danh-muc/{slug}', [IndexController::class,'danhmuc']);
+Route::get('/the-loai/{slug}', [IndexController::class,'theloai']);
 
 Auth::routes();
 
