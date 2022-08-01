@@ -16,9 +16,7 @@ class CategoryNovel extends Model
     protected $table= 'categorynovels';
       public $incrementing = false;
 
-     public function danhmuc(){
-        return $this->belongsTo('App\Models\Category','id_category','id_category');    
-    }
+     
      public function truyen(){
         return $this->hasMany('App\Models\Novel','id_cate_novel','id_cate_novel');
     }

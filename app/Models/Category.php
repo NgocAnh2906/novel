@@ -16,8 +16,8 @@ class Category extends Model
     protected $primaryKey='id_category';
     protected $table= 'categories';
 
-    public function theloai(){
-        return $this->hasMany('App\Models\CategoryNovel','id_category','id_category');
+    public function truyen(){
+        return $this->hasMany('App\Models\Novel','id_category','id_category');
     }
 
 }

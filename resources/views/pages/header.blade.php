@@ -1,8 +1,13 @@
 <div id="header" class="shell">
-        <div id="logo"><h1><a href="#">BestSeller</a></h1><span><a href="#">free css template</a></span></div>
+        <div class="logo-container">
+            <a href="#">
+                    <img class="logo" src="/css/images/login.png" alt="">
+                    <span></span>
+            </a>
+        </div>
         <!-- Navigation -->
         <div id="navigation">
-            <ul>
+            <ul  class="navigation-list">
                 <li class="nav-item active">
                     <a class="nav-link" href="{{url('/') }}">Trang chủ <span class="sr-only"></span></a>
                 </li>
@@ -26,10 +31,11 @@
                          @endforeach
                     </ul> 
                 </li>
-                <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                      </form>
+                <form class="d-flex" action="{{url('tim-kiem')}}" method="GET">
+                    <input class="form-control me-2" type="search"  name="tukhoa"  placeholder="Tìm kiếm truyện, tác giả..." aria-label="Search">
+                
+                    <button class="btn btn-outline-success" type="submit">Tìm kiếm</button>
+                </form>
             </ul>
             
         </div>
@@ -37,7 +43,8 @@
         <div class="cl">&nbsp;</div>
         <!-- Login-details -->
         <div id="login-details">
-            <p>Welcome, <a href="#" id="user">Guest</a> .</p><p><a href="#" class="cart" ><img src="../css/images/cart-icon.png" alt="" /></a>Shopping Cart (0) <a href="#" class="sum">$0.00</a></p>
+            <i class="fa-thin fa-alarm-clock"></i>
+            <p>Xin chào, <a href="{{ route('login') }}" id="user">Đăng nhập</a> .</p><p><a href="#" class="cart" ><img src="../css/images/cart-icon.png" alt="" /></a>Shopping Cart (0) <a href="#" class="sum">$0.00</a></p>
         </div>
         <!-- End Login-details -->
     </div>

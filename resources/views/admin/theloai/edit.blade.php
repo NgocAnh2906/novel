@@ -40,15 +40,6 @@
                             <input type="text" class="form-control"  name="slug_cate_novel" value="{{$theloai->slug_cate_novel}}" id="convert_slug" aria-describedby="emailHelp" placeholder="Slug thể loại.....">
                         </div>
                         <div class="form-group">
-                              <label for="exampleInputEmail1" class="form-label"> Danh mục :</label>
-                            <select class="form-select" aria-label="Default select example" name="category">
-                                @foreach ($danhmuc as $key =>$danh)
-                                <option {{$danh->id_catenovel==$theloai->id_catenovel? 'selected' : ''}} value="{{$danh->id_category}}">{{$danh->name_category}}</option>
-
-                                 @endforeach
-                             </select>
-                        </div>
-                        <div class="form-group">
                               <label for="exampleInputEmail1" class="form-label">Kích hoạt:</label>
                             <select class="form-select" aria-label="Default select example" name="status">
                                 @if($theloai->status==0)

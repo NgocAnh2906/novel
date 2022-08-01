@@ -38,7 +38,7 @@
                      
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Nội dung chương :</label>
-                            <textarea name="main_content"   rows="4"class="form-control"   placeholder="Mô tả chương.....">{{$chapter->main_content}}</textarea>
+                            <textarea name="main_content" id="noidung_chapter2"   rows="4"class="form-control"   placeholder="Mô tả chương.....">{{$chapter->main_content}}</textarea>
                         </div>
                          <div class="form-group">
                               <label for="exampleInputEmail1" class="form-label"> Thuộc truyện :</label>

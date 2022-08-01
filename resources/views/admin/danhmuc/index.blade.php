@@ -11,20 +11,13 @@
                     <td class="navbar-brand">
                         <h3>
                             Liệt kê danh mục truyện
-                             <td >
-                        <a type="button" href="{{ url('/danhmuc/create') }}"class="btn btn-outline-info">
-                            <i class="fa-solid fa-circle-plus">Thêm mới</i>
-                        </a>
-                        
-                        
-                    </td>
+                            <td >
+                                <a type="button" href="{{ url('/danhmuc/create') }}"class="btn btn-outline-info">
+                                    <i class="fa-solid fa-circle-plus">Thêm mới</i>
+                                </a>
+                            </td>
                         </h3>
                     </td>
-                   
-                    
-                </div>
-                <div>
-                    
                 </div>
                 <div class="card-body">
                     @if (session('success'))
@@ -38,7 +31,7 @@
                           <th scope="col">STT</th>
                           <th scope="col">Tên danh mục</th>
                           <th scope="col">Slug danh mục</th>
-                          <th scope="col">Mô tả</th>
+                          <th scope="col" class="th-description">Mô tả</th>
                           <th scope="col">Kích hoạt</th>
                           <th scope="col">Hành động</th>
                         </tr>
@@ -78,9 +71,9 @@
                         @endforeach
                       </tbody>
                     </table>
-
-
-                   
+                    <nav class="pagination-container">
+					    {!!$danhmuc->links()!!}
+				    </nav>
                 </div>
             </div>
         </div>

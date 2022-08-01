@@ -3,28 +3,25 @@
 	@include ('pages.menu')
 @endsection
 @section('content')
-	
-	
-        
         <div class="products">
             <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item"><a href="#">Library</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Data</li>
+                <li class="breadcrumb-item"><a href="{{ url('/') }}">Trang chủ</a></li>
+                 <li class="breadcrumb-item active" aria-current="page">{{$tentheloai}}</li>
+               
             </ol>
             </nav>
         <!-- Novel -->
         <div class="products">
-        <h3>TRUYỆN MỚI CẬP NHẬT</h3>
+        <h3>{{$tentheloai}}</h3>
             <ul>
                 @php
-                    $count = count($truyen)
+                    $count = count($truyen_tl)
                 @endphp
                 @if ($count==0)
                     <p> &nbsp  &nbsp Truyện đang cập nhật.......</p>
                 @else
-                @foreach ($truyen as $key => $t)
+                @foreach ($truyen_tl as $key => $t)
                 <li>
                     <div class="product">
                         <a href="{{url('doc-truyen/'.$t->id_novel)}} " class="info">
@@ -40,6 +37,9 @@
                 @endforeach
                 @endif
             </ul>
+            <nav class="pagination-container">
+                {!!$truyen_tl->links()!!}
+            </nav>
     </div>
   
    

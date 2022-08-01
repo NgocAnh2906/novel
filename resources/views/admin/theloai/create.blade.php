@@ -38,15 +38,6 @@
                             <input type="text" class="form-control" value="{{old('slug_cate_novel')}}" name="slug_cate_novel" id="convert_slug" aria-describedby="emailHelp" placeholder="Slug thể loại.....">
                         </div>
                         <div class="form-group">
-                              <label for="exampleInputEmail1" class="form-label"> Danh mục :</label>
-                            <select class="form-select" aria-label="Default select example" name="category">
-                                @foreach ($danhmuc as $key =>$danh)
-                                <option value="{{$danh->id_category}}">{{$danh->name_category}}</option>
-
-                                 @endforeach
-                             </select>
-                        </div>
-                        <div class="form-group">
                               <label for="exampleInputEmail1" class="form-label">Kích hoạt:</label>
                             <select class="form-select" aria-label="Default select example" name="status">
                                 <option value="0">Kích hoạt</option>

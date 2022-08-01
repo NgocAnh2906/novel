@@ -6,16 +6,18 @@
 					<h4>Thể loại</h4>
 					<ul>
 						@foreach ($theloai as $key => $tl)
-						<li><a href="#">{{$tl->name_cate_novel}}</a></li>
+						<li><a href="{{url('the-loai/'.$tl->slug_cate_novel)}}">{{$tl->name_cate_novel}}</a></li>
 						@endforeach
 					</ul>
 				</li>
 				<li>
 					<h4>Truyện hot</h4>
 					<ul>
-						@foreach ( $truyen as $key => $t)
-						<li class="side-name" ><a href="#">{{$t->name_novel}}</a></li>
-						@endforeach
+						@for($i=0; $i < 5 ; $i++ )
+						
+						<li class="side-name" ><a href="{{url('doc-truyen/'.$truyen[$i]->id_novel)}} ">{{$truyen[$i]->name_novel}}</a></li>
+						
+						@endfor
 					</ul>
 				</li>
 

@@ -11,12 +11,12 @@
 
         <!-- Styles -->
         
-        <!-- <script src="https://kit.fontawesome.com/yourcode.js"></script> -->
         <script src="https://kit.fontawesome.com/0a09dca1f7.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
           <!-- Scripts -->
         <link rel="stylesheet" href="{{asset('css/style.css')}}" type="text/css" media="all" />
         <link href="{{ asset('css/app.css')}}" rel="stylesheet">
-        <link rel="shortcut icon" href="css/images/favicon.ico" />
+        <link rel="shortcut icon" href="/css/images/favicon.ico" />
 
 
     </head>
@@ -34,7 +34,21 @@
     <script type="text/javascript" src="{{asset('js/jquery-1.6.2.min.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/jquery.jcarousel.min.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/functions.js')}}"></script>
-
+    
+    <script type="text/javascript">
+      $('.select-chapter').change(function(){
+        var url = $(this).val();
+        if(url){
+          window.location= url ;
+        }
+        return false;
+      });
+      current_chapter();
+      function current_chapter(){
+        var url  = window.location.href;
+        $('.select-chapter').find('option[value="'+url+'"]').attr("selected",true);
+      }
+    </script>
 
     </body>
 </html>

@@ -54,6 +54,15 @@
                                  @endforeach
                              </select>
                         </div>
+                         <div class="form-group">
+                              <label for="exampleInputEmail1" class="form-label"> Danh mục :</label>
+                            <select class="form-select" aria-label="Default select example" name="danhmuc">
+                                @foreach ($danhmuc as $key =>$danh)
+                                <option value="{{$danh->id_category}}">{{$danh->name_category}}</option>
+
+                                 @endforeach
+                             </select>
+                        </div>
                        
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Lượt xem:</label>
@@ -61,7 +70,7 @@
                         </div>
                          <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Mô tả truyện:</label>
-                            <textarea name="description" rows="4"class="form-control"   placeholder="Mô tả truyện.....">{{old('description')}}</textarea>
+                            <textarea name="description" id="noidung_truyen1" rows="4"class="form-control"   placeholder="Mô tả truyện.....">{{old('description')}}</textarea>
                         </div>
                         <div class="form-group">
                               <label for="exampleInputEmail1" class="form-label">Kích hoạt:</label>

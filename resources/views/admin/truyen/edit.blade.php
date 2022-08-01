@@ -47,7 +47,6 @@
                             <label for="exampleInputEmail1" class="form-label">Tác giả:</label>
                             <input type="text" class="form-control" value="{{$truyen->author}}" name="author" aria-describedby="emailHelp" placeholder="Tác giả.....">
                         </div>
-                        
                         <div class="form-group">
                               <label for="exampleInputEmail1" class="form-label"> Thể loại:</label>
                             <select class="form-select" aria-label="Default select example" name="category">
@@ -57,14 +56,21 @@
                                  @endforeach
                              </select>
                         </div>
-                       
+                        <div class="form-group">
+                              <label for="exampleInputEmail1" class="form-label"> Danh mục :</label>
+                            <select class="form-select" aria-label="Default select example" name="danhmuc">
+                                @foreach ($danhmuc as $key =>$danh)
+                                <option {{$danh->id_category==$truyen->id_category? 'selected' : ''}} value="{{$danh->id_category}}">{{$danh->name_category}}</option>
+                                 @endforeach
+                             </select>
+                        </div>
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Lượt xem:</label>
                             <input type="text" class="form-control" value="{{$truyen->view}}" name="view" aria-describedby="emailHelp" placeholder="Lượt xem.....">
                         </div>
                          <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Mô tả truyện:</label>
-                            <textarea name="description" rows="4"class="form-control"   placeholder="Mô tả truyện.....">{{$truyen->description}}</textarea>
+                            <textarea name="description" id="noidung_truyen2" rows="4"class="form-control"   placeholder="Mô tả truyện.....">{{$truyen->description}}</textarea>
                         </div>
                         <div class="form-group">
                               <label for="exampleInputEmail1" class="form-label">Kích hoạt:</label>
